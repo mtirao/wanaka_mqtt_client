@@ -1,0 +1,66 @@
+name: wanaka-mqtt-client
+version: '0.1.0.0'
+category: Web
+author: Marcos Tirao
+maintainer: marcos.tirao@icloud.com
+copyright: 2025 Marcos Tirao
+license: BSD3
+homepage: https://github.com/mtirao/wanaka_token#readme
+source-dirs:
+- .
+- src/controllers
+- src/models
+- src/views
+extra-source-files:
+- README.md
+default-extensions:
+- DuplicateRecordFields
+- DeriveAnyClass
+- DerivingStrategies
+- OverloadedStrings
+- OverloadedRecordDot
+- TemplateHaskell
+- QuasiQuotes
+ghc-options:
+- -threaded
+- -O2
+- -rtsopts
+- -with-rtsopts=-N
+- -Wno-deprecations
+- -Wno-unused-imports
+- -Wno-type-equality-out-of-scope
+- -Wno-type-equality-requires-operators
+dependencies:
+- base >=4.14.3.0
+- scotty
+- bytestring
+- text
+- aeson
+- transformers
+- wai
+- wai-middleware-static
+- wai-extra
+- resource-pool
+- configurator
+- MissingH
+- lens
+- lens-aeson
+- wreq
+- http-types
+- time
+- warp-tls
+- warp
+- bytestring-conversion
+- net-mqtt
+- network-uri
+- network
+- network-simple
+- network-info
+- uuid
+- HTTP
+- http-client
+- http-types
+- yaml
+executables:
+  wanaka-mqtt-client:
+    main: Main.hs

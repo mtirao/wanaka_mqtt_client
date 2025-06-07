@@ -1,0 +1,67 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.37.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           wanaka-mqtt-client
+version:        0.1.0.0
+category:       Web
+homepage:       https://github.com/mtirao/wanaka_token#readme
+author:         Marcos Tirao
+maintainer:     marcos.tirao@icloud.com
+copyright:      2025 Marcos Tirao
+license:        BSD3
+build-type:     Simple
+extra-source-files:
+    README.md
+
+executable wanaka-mqtt-client
+  main-is: Main.hs
+  other-modules:
+      Paths_wanaka_mqtt_client
+  hs-source-dirs:
+      ./
+      src/controllers
+      src/models
+      src/views
+  default-extensions:
+      DuplicateRecordFields
+      DeriveAnyClass
+      DerivingStrategies
+      OverloadedStrings
+      OverloadedRecordDot
+      TemplateHaskell
+      QuasiQuotes
+  ghc-options: -threaded -O2 -rtsopts -with-rtsopts=-N -Wno-deprecations -Wno-unused-imports -Wno-type-equality-out-of-scope -Wno-type-equality-requires-operators
+  build-depends:
+      HTTP
+    , MissingH
+    , aeson
+    , base >=4.14.3.0
+    , bytestring
+    , bytestring-conversion
+    , configurator
+    , http-client
+    , http-types
+    , lens
+    , lens-aeson
+    , net-mqtt
+    , network
+    , network-info
+    , network-simple
+    , network-uri
+    , resource-pool
+    , scotty
+    , text
+    , time
+    , transformers
+    , uuid
+    , wai
+    , wai-extra
+    , wai-middleware-static
+    , warp
+    , warp-tls
+    , wreq
+    , yaml
+  default-language: Haskell2010
